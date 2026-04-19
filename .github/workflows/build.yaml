@@ -7,11 +7,11 @@ jobs:
   docker:
     runs-on: ubuntu-22.04-arm
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
       - name: Clone TimeLimit repo
         run: git clone https://codeberg.org/timelimit/timelimit-server.git .
+
+      - name: Run Bash script
+        run: touch .eslintignore
         
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
