@@ -11,7 +11,7 @@ jobs:
         run: git clone https://codeberg.org/timelimit/timelimit-server.git .
 
       - name: Run Bash script
-        run: touch .eslintignore
+        run: touch .eslintignore && touch .eslintrc.js
         
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
